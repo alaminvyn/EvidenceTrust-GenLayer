@@ -1,0 +1,20 @@
+[project]
+name = "evidencetrust"
+version = "0.1.0"
+description = "Source-grounded evidence verification using GenLayer Intelligent Contracts"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["genlayer-test==0.29.2", "genvm-linter==0.11.0", "pytest==9.2.0", "ruff==0.17.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/direct"]
+addopts = "-p no:gltest -ra"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["F403", "F405"]  # Official GenLayer contracts conventionally use star imports.

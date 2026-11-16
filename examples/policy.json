@@ -1,0 +1,19 @@
+{
+  "version": "synthetic-demo-v1",
+  "min_support": 2,
+  "min_refute": 2,
+  "sources": [
+    {
+      "host": "agency.example.org",
+      "group": "agency",
+      "authoritative": true,
+      "reference_url": "https://agency.example.org/evidence"
+    },
+    {
+      "host": "institute.example.net",
+      "group": "institute",
+      "authoritative": true,
+      "reference_url": "https://institute.example.net/evidence"
+    }
+  ]
+}

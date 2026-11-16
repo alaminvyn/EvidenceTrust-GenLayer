@@ -1,0 +1,22 @@
+{
+  "version": "studio-robots-v2",
+  "min_support": 2,
+  "min_refute": 2,
+  "sources": [
+    {
+      "host": "www.nasa.gov",
+      "group": "nasa",
+      "authoritative": true,
+      "reference_url": "https://www.nasa.gov/robots.txt",
+      "source_id": "nasa_robots"
+    },
+    {
+      "host": "www.noaa.gov",
+      "group": "noaa",
+      "authoritative": true,
+      "reference_url": "https://www.noaa.gov/robots.txt",
+      "source_id": "noaa_robots"
+    }
+  ],
+  "verification_mode": "all_required_subclaims"
+}

@@ -1,0 +1,3 @@
+[
+  "{\"min_refute\":2,\"min_support\":2,\"sources\":[{\"authoritative\":true,\"group\":\"nasa\",\"host\":\"www.nasa.gov\",\"reference_url\":\"https://www.nasa.gov/robots.txt\"},{\"authoritative\":true,\"group\":\"noaa\",\"host\":\"www.noaa.gov\",\"reference_url\":\"https://www.noaa.gov/robots.txt\"}],\"version\":\"studio-robots-v1\"}"
+]

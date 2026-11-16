@@ -1,0 +1,150 @@
+{
+  "live_contract_execution_tested": false,
+  "note": "Verification statuses are acceptance targets, not observed live results. NASA/NOAA are distinct publishers under a shared US-government trust root.",
+  "cases": [
+    {
+      "name": "wildcard_directive",
+      "submit_args": [
+        "The robots.txt document served by this source includes a User-agent: * directive.",
+        [
+          "https://www.nasa.gov/robots.txt",
+          "https://www.noaa.gov/robots.txt"
+        ],
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"wildcard_directive\"}"
+      ],
+      "expected_record_id": "0736a3c31a2dcd866d65d9b3075f849cdb95d10512bb58cb82cbd15fb6ec483b",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "expected_after_verify_if_sources_and_validators_agree": {
+        "status": "Verified",
+        "attempts": 1,
+        "source_labels": [
+          "supports",
+          "supports"
+        ]
+      },
+      "verify_args": [
+        "0736a3c31a2dcd866d65d9b3075f849cdb95d10512bb58cb82cbd15fb6ec483b"
+      ],
+      "get_record_args": [
+        "0736a3c31a2dcd866d65d9b3075f849cdb95d10512bb58cb82cbd15fb6ec483b"
+      ],
+      "get_history_args": [
+        "0736a3c31a2dcd866d65d9b3075f849cdb95d10512bb58cb82cbd15fb6ec483b",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "css_forbidden",
+      "submit_args": [
+        "For this source's robots.txt wildcard user-agent group, crawling /core/example.css is forbidden.",
+        [
+          "https://www.nasa.gov/robots.txt",
+          "https://www.noaa.gov/robots.txt"
+        ],
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"css_forbidden\"}"
+      ],
+      "expected_record_id": "29f58e37f9b63240485affc8982b0123fe0410599b24cf572e6fa3946d21f2d6",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "expected_after_verify_if_sources_and_validators_agree": {
+        "status": "Rejected",
+        "attempts": 1,
+        "source_labels": [
+          "contradicts",
+          "contradicts"
+        ]
+      },
+      "verify_args": [
+        "29f58e37f9b63240485affc8982b0123fe0410599b24cf572e6fa3946d21f2d6"
+      ],
+      "get_record_args": [
+        "29f58e37f9b63240485affc8982b0123fe0410599b24cf572e6fa3946d21f2d6"
+      ],
+      "get_history_args": [
+        "29f58e37f9b63240485affc8982b0123fe0410599b24cf572e6fa3946d21f2d6",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "admin_permitted",
+      "submit_args": [
+        "For this source's robots.txt wildcard user-agent group, crawling /admin/ is permitted.",
+        [
+          "https://www.nasa.gov/robots.txt",
+          "https://www.noaa.gov/robots.txt"
+        ],
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"admin_permitted\"}"
+      ],
+      "expected_record_id": "14be67f5e423d32c86e4494aff2383af228402f875fdb41453246c221abb593d",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "expected_after_verify_if_sources_and_validators_agree": {
+        "status": "Disputed",
+        "attempts": 1,
+        "source_labels": [
+          "supports",
+          "contradicts"
+        ]
+      },
+      "verify_args": [
+        "14be67f5e423d32c86e4494aff2383af228402f875fdb41453246c221abb593d"
+      ],
+      "get_record_args": [
+        "14be67f5e423d32c86e4494aff2383af228402f875fdb41453246c221abb593d"
+      ],
+      "get_history_args": [
+        "14be67f5e423d32c86e4494aff2383af228402f875fdb41453246c221abb593d",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "invoice_unsubstantiated",
+      "submit_args": [
+        "This source's robots.txt proves that invoice INV-2026-1101 was paid in full on 2026-11-15.",
+        [
+          "https://www.nasa.gov/robots.txt",
+          "https://www.noaa.gov/robots.txt"
+        ],
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"invoice_unsubstantiated\"}"
+      ],
+      "expected_record_id": "12bf8146ea0e6878f975ed7ea04b25b1cfb3442db7014007db2e47fe5b291da8",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "expected_after_verify_if_sources_and_validators_agree": {
+        "status": "Pending",
+        "attempts": 1,
+        "source_labels": [
+          "insufficient",
+          "insufficient"
+        ]
+      },
+      "verify_args": [
+        "12bf8146ea0e6878f975ed7ea04b25b1cfb3442db7014007db2e47fe5b291da8"
+      ],
+      "get_record_args": [
+        "12bf8146ea0e6878f975ed7ea04b25b1cfb3442db7014007db2e47fe5b291da8"
+      ],
+      "get_history_args": [
+        "12bf8146ea0e6878f975ed7ea04b25b1cfb3442db7014007db2e47fe5b291da8",
+        0,
+        8
+      ]
+    }
+  ]
+}

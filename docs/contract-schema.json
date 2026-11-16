@@ -1,0 +1,132 @@
+{
+  "ctor": {
+    "params": [
+      [
+        "policy_json",
+        "string"
+      ]
+    ],
+    "kwparams": {}
+  },
+  "methods": {
+    "get_history": {
+      "params": [
+        [
+          "record_id",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": [
+        {
+          "$rep": "string"
+        }
+      ]
+    },
+    "get_policy": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_record": {
+      "params": [
+        [
+          "record_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "list_records": {
+      "params": [
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": [
+        {
+          "$rep": "string"
+        }
+      ]
+    },
+    "submit": {
+      "params": [
+        [
+          "claim",
+          "string"
+        ],
+        [
+          "source_urls",
+          [
+            {
+              "$rep": "string"
+            }
+          ]
+        ],
+        [
+          "observed_at",
+          "string"
+        ],
+        [
+          "metadata_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "submit_scoped": {
+      "params": [
+        [
+          "subclaims_json",
+          "string"
+        ],
+        [
+          "observed_at",
+          "string"
+        ],
+        [
+          "metadata_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "verify": {
+      "params": [
+        [
+          "record_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}

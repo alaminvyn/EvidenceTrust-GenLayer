@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-11-16",
+  "method": "Read-only host HTTP GET, not GenVM or validator execution",
+  "live_contract_execution_tested": false,
+  "sources": [
+    {
+      "url": "https://www.nasa.gov/robots.txt",
+      "http_status": 200,
+      "bytes": 69,
+      "utf8": true,
+      "under_contract_body_limit": true,
+      "sha256": "44d72c5ad1a94bb45f25caaba917c39b39b383af3a121b59a5a7e46fbe3ccb05",
+      "wildcard_directive_present": true,
+      "redirects_followed": false
+    },
+    {
+      "url": "https://www.noaa.gov/robots.txt",
+      "http_status": 200,
+      "bytes": 2631,
+      "utf8": true,
+      "under_contract_body_limit": true,
+      "sha256": "4dc218e6cf79ce2c82d17bf4e856f72baeb81bdee085d169dc5b925962ac3577",
+      "wildcard_directive_present": true,
+      "redirects_followed": false
+    }
+  ]
+}

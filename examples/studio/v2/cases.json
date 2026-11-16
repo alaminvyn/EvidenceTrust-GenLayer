@@ -1,0 +1,178 @@
+{
+  "live_execution_tested": false,
+  "note": "Unexecuted acceptance targets only. No source contents were fetched or refreshed for v2. Retest actual documents and model grounding in a separately authorized Studio session.",
+  "cases": [
+    {
+      "name": "wildcard_directives",
+      "subclaims": [
+        {
+          "source_id": "nasa_robots",
+          "source_url": "https://www.nasa.gov/robots.txt",
+          "claim": "NASA robots.txt includes a User-agent: * directive."
+        },
+        {
+          "source_id": "noaa_robots",
+          "source_url": "https://www.noaa.gov/robots.txt",
+          "claim": "NOAA robots.txt includes a User-agent: * directive."
+        }
+      ],
+      "submit_scoped_args": [
+        "[{\"claim\":\"NASA robots.txt includes a User-agent: * directive.\",\"source_id\":\"nasa_robots\",\"source_url\":\"https://www.nasa.gov/robots.txt\"},{\"claim\":\"NOAA robots.txt includes a User-agent: * directive.\",\"source_id\":\"noaa_robots\",\"source_url\":\"https://www.noaa.gov/robots.txt\"}]",
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"wildcard_directives\"}"
+      ],
+      "expected_record_id": "303184741abd3b0c30fe0fd2f853642c32eddb772b8bba992dde180e0bb95fb2",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "unexecuted_acceptance_target": {
+        "status": "Verified",
+        "source_labels": [
+          "supports",
+          "supports"
+        ]
+      },
+      "verify_args": [
+        "303184741abd3b0c30fe0fd2f853642c32eddb772b8bba992dde180e0bb95fb2"
+      ],
+      "get_record_args": [
+        "303184741abd3b0c30fe0fd2f853642c32eddb772b8bba992dde180e0bb95fb2"
+      ],
+      "get_history_args": [
+        "303184741abd3b0c30fe0fd2f853642c32eddb772b8bba992dde180e0bb95fb2",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "css_forbidden",
+      "subclaims": [
+        {
+          "source_id": "nasa_robots",
+          "source_url": "https://www.nasa.gov/robots.txt",
+          "claim": "NASA robots.txt forbids the wildcard user-agent group from crawling /core/example.css."
+        },
+        {
+          "source_id": "noaa_robots",
+          "source_url": "https://www.noaa.gov/robots.txt",
+          "claim": "NOAA robots.txt forbids the wildcard user-agent group from crawling /core/example.css."
+        }
+      ],
+      "submit_scoped_args": [
+        "[{\"claim\":\"NASA robots.txt forbids the wildcard user-agent group from crawling /core/example.css.\",\"source_id\":\"nasa_robots\",\"source_url\":\"https://www.nasa.gov/robots.txt\"},{\"claim\":\"NOAA robots.txt forbids the wildcard user-agent group from crawling /core/example.css.\",\"source_id\":\"noaa_robots\",\"source_url\":\"https://www.noaa.gov/robots.txt\"}]",
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"css_forbidden\"}"
+      ],
+      "expected_record_id": "31f53545d16ce549573dc79dccdf2f1a81bfe176024fea4f8e6eabc110f64e24",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "unexecuted_acceptance_target": {
+        "status": "Rejected",
+        "source_labels": [
+          "contradicts",
+          "contradicts"
+        ]
+      },
+      "verify_args": [
+        "31f53545d16ce549573dc79dccdf2f1a81bfe176024fea4f8e6eabc110f64e24"
+      ],
+      "get_record_args": [
+        "31f53545d16ce549573dc79dccdf2f1a81bfe176024fea4f8e6eabc110f64e24"
+      ],
+      "get_history_args": [
+        "31f53545d16ce549573dc79dccdf2f1a81bfe176024fea4f8e6eabc110f64e24",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "mixed_admin_permissions",
+      "subclaims": [
+        {
+          "source_id": "nasa_robots",
+          "source_url": "https://www.nasa.gov/robots.txt",
+          "claim": "NASA robots.txt permits the wildcard user-agent group to crawl /admin/."
+        },
+        {
+          "source_id": "noaa_robots",
+          "source_url": "https://www.noaa.gov/robots.txt",
+          "claim": "NOAA robots.txt permits the wildcard user-agent group to crawl /admin/."
+        }
+      ],
+      "submit_scoped_args": [
+        "[{\"claim\":\"NASA robots.txt permits the wildcard user-agent group to crawl /admin/.\",\"source_id\":\"nasa_robots\",\"source_url\":\"https://www.nasa.gov/robots.txt\"},{\"claim\":\"NOAA robots.txt permits the wildcard user-agent group to crawl /admin/.\",\"source_id\":\"noaa_robots\",\"source_url\":\"https://www.noaa.gov/robots.txt\"}]",
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"mixed_admin_permissions\"}"
+      ],
+      "expected_record_id": "d7013f3d874d2a1d991dbc23f6a8366e1c7176f15081b5af9938dc502c40501f",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "unexecuted_acceptance_target": {
+        "status": "Disputed",
+        "source_labels": [
+          "supports",
+          "contradicts"
+        ]
+      },
+      "verify_args": [
+        "d7013f3d874d2a1d991dbc23f6a8366e1c7176f15081b5af9938dc502c40501f"
+      ],
+      "get_record_args": [
+        "d7013f3d874d2a1d991dbc23f6a8366e1c7176f15081b5af9938dc502c40501f"
+      ],
+      "get_history_args": [
+        "d7013f3d874d2a1d991dbc23f6a8366e1c7176f15081b5af9938dc502c40501f",
+        0,
+        8
+      ]
+    },
+    {
+      "name": "unsubstantiated_payment",
+      "subclaims": [
+        {
+          "source_id": "nasa_robots",
+          "source_url": "https://www.nasa.gov/robots.txt",
+          "claim": "NASA robots.txt proves invoice INV-2026-1101 was paid in full."
+        },
+        {
+          "source_id": "noaa_robots",
+          "source_url": "https://www.noaa.gov/robots.txt",
+          "claim": "NOAA robots.txt proves invoice INV-2026-1101 was paid in full."
+        }
+      ],
+      "submit_scoped_args": [
+        "[{\"claim\":\"NASA robots.txt proves invoice INV-2026-1101 was paid in full.\",\"source_id\":\"nasa_robots\",\"source_url\":\"https://www.nasa.gov/robots.txt\"},{\"claim\":\"NOAA robots.txt proves invoice INV-2026-1101 was paid in full.\",\"source_id\":\"noaa_robots\",\"source_url\":\"https://www.noaa.gov/robots.txt\"}]",
+        "2026-11-16T00:00:00Z",
+        "{\"category\":\"website-policy-audit\",\"scenario\":\"unsubstantiated_payment\"}"
+      ],
+      "expected_record_id": "5f76b9a3ef053e980e7a84dbac213f7aec53be99e4956bc66bd8606dc140d806",
+      "expected_after_submit": {
+        "status": "Pending",
+        "attempts": 0
+      },
+      "unexecuted_acceptance_target": {
+        "status": "Pending",
+        "source_labels": [
+          "insufficient",
+          "insufficient"
+        ]
+      },
+      "verify_args": [
+        "5f76b9a3ef053e980e7a84dbac213f7aec53be99e4956bc66bd8606dc140d806"
+      ],
+      "get_record_args": [
+        "5f76b9a3ef053e980e7a84dbac213f7aec53be99e4956bc66bd8606dc140d806"
+      ],
+      "get_history_args": [
+        "5f76b9a3ef053e980e7a84dbac213f7aec53be99e4956bc66bd8606dc140d806",
+        0,
+        8
+      ]
+    }
+  ]
+}
